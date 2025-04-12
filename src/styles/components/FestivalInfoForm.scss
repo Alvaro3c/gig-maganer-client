@@ -1,0 +1,68 @@
+@import '../utils/mixings.scss';
+@import '../utils/variables.scss';
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+
+
+    #add-festival-artist-btn {
+        @include pink-button
+    }
+
+
+
+    #festival-artist {
+        border: 1px solid white;
+        width: 100%;
+        height: 200px;
+    }
+
+}
+
+#festival-artists {
+    #no-festival-artist-added-message {
+        padding: 40px;
+
+        h4 {
+            color: $color-secondary;
+            font-size: 1.7rem;
+            font-family: $font-family-heading;
+            text-align: center;
+            margin-bottom: $spacing-md;
+        }
+
+        p {
+            font-size: 1.4rem;
+        }
+    }
+
+
+    .date-input {
+        margin-top: $spacing-xs;
+        cursor: pointer;
+        font-size: 2rem;
+    }
+
+    .festival-artists-inputs {
+        margin: $spacing-xs 0 $spacing-md;
+    }
+
+    #festival-artists-buttons {
+        margin: $spacing-sm auto;
+
+        button {
+            margin-right: $spacing-sm;
+        }
+
+        #cancel-btn {
+            @include blue-button
+        }
+
+        #add-artist-input {
+            @include magenta-button
+        }
+    }
+}

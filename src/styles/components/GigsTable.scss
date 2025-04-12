@@ -1,0 +1,44 @@
+@import '../utils/mixings.scss';
+@import '../utils/variables.scss';
+
+#gigs-table-wrapper {
+    @include blue-box;
+    width: 100%;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+        height: 18px;
+    }
+
+    &::-webkit-scrollbar-track {
+        border-radius: 4px;
+        background-color: black;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #000000;
+        border-radius: 4px;
+    }
+
+    table {
+        width: 100%;
+        text-align: left;
+        font-size: 1.5rem;
+        font-family: $font-family-base;
+        border-collapse: collapse;
+    }
+
+    margin-bottom:30px;
+}
+
+@media (max-width: 768px) {
+    #gigs-table-wrapper {
+        border: none;
+        border-radius: 40px;
+        box-shadow: none;
+    }
+
+    table {
+        background-color: black;
+    }
+}

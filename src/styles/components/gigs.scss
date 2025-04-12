@@ -1,0 +1,132 @@
+@import '../utils/mixings.scss';
+@import '../utils/variables.scss';
+
+tbody tr:last-of-type td {
+    border-bottom: none;
+}
+
+td {
+    padding: $spacing-lg $spacing-sm;
+    color: $color-text-dark-light;
+    text-align: left;
+    border-bottom: 1px solid $color-muted;
+    height: 120px;
+
+    h4 {
+        display: none;
+    }
+}
+
+.is-festival-status {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    div {
+        @include blue-small-box;
+        padding: 10px 20px;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+}
+
+.is-abroad-status {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    div {
+        @include magenta-button;
+        padding: 10px 20px;
+        border-radius: 30px;
+        cursor: auto;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+}
+
+#total-with-tickets {
+    @include blue-small-box
+}
+
+.ticket-status {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; // spacing between checkbox and icon
+
+
+    input[type='checkbox'] {
+        width: 1.2rem;
+        height: 1.2rem;
+        cursor: pointer;
+        accent-color: #389c32;
+    }
+
+    input[type='checkbox']:hover {
+        transform: scale(1.1);
+    }
+}
+
+#delete-btn {
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#delete-btn:active {
+    transform: scale(1.5);
+}
+
+@media (max-width: 768px) {
+
+
+    thead {
+        display: none; // ocultamos cabecera
+    }
+
+    //tarjeta
+    tr {
+        display: block;
+        width: 100%;
+        margin-bottom: 2rem;
+        border-radius: 10px;
+        margin-top: 50px;
+        border: 1px solid #9333ea;
+        box-shadow: 0 0 30px 10px #3a155d;
+    }
+
+    //interior de la tarjeta
+    td {
+        display: flex;
+        flex-direction: column;
+        padding: $spacing-sm $spacing-md;
+        height: auto;
+        box-shadow: 0 0 16px 4px rgba($color-accent, 0.2);
+
+        h4 {
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        border-bottom: none;
+
+        .is-festival-status {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            //margin: 0 20px;
+            text-align: left;
+        }
+
+    }
+
+    #delete-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    // Opcional: para dar un poco de separación visual entre tarjetas
+
+}

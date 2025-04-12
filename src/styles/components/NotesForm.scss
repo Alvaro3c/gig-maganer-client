@@ -1,0 +1,29 @@
+@import '../utils/mixings.scss';
+@import '../utils/variables.scss';
+
+.textarea {
+    height: 100px;
+    width: 100%;
+    margin-top: $spacing-md;
+    padding: 10px;
+    background-color: $color-bg-dark;
+    border-color: $color-accent;
+    color: white;
+    font-size: 1.5rem;
+    font-family: $font-family-base;
+}
+
+.textarea::placeholder {
+    font-family: $font-family-base;
+}
+
+.textarea:focus {
+    outline: $color-dark-secondary;
+}
+
+h5 {
+    margin-top: $spacing-lg;
+    color: $color-secondary;
+    font-size: 1.5rem;
+    font-family: $font-family-heading;
+}

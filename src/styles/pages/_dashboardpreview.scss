@@ -1,0 +1,41 @@
+@import '../utils/mixings.scss';
+@import '../utils/variables.scss';
+
+.dashboard-wrapper {
+    margin: 0 5% 5%;
+
+
+    #upper-heading {
+        margin: 4rem 0;
+        display: flex;
+        justify-content: space-between;
+
+        h2 {
+            @include magenta-gradient;
+        }
+
+        button {
+            @include blue-button;
+        }
+    }
+
+    #description {
+        @include blue-box;
+        border-radius: 8px;
+        padding: $spacing-md;
+
+        p {
+            text-align: left;
+        }
+    }
+
+    #add-gig-btn {
+        @include magenta-button;
+        padding: 10px 20px;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 20px; // Ajusta esto al gusto
+    }
+
+}

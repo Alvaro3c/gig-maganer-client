@@ -1,0 +1,110 @@
+@import '../utils/variables.scss';
+
+@mixin magenta-gradient {
+    background: $color-gradient-primary;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@mixin blue-button {
+    background-color: transparent;
+    color: $color-accent;
+    border: 2px solid $color-accent;
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.5);
+    border-radius: 8px;
+    font-size: $font-size-p;
+    font-family: $font-family-base;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: rgba(6, 182, 212, 0.1);
+        color: $color-accent;
+    }
+}
+
+/* buttons */
+@mixin pink-button {
+    background-color: $color-secondary;
+    color: $color-text-light;
+    border: 1px solid $color-border;
+    box-shadow: 0 0 20px rgba(236, 72, 153, 1);
+    border-radius: 8px;
+    font-size: $font-size-p;
+    font-family: $font-family-base;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: $color-dark-secondary;
+    }
+}
+
+@mixin magenta-button {
+    background-color: $color-bg-dark;
+    color: $color-text-light;
+    border: 2px solid #9333ea;
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.5);
+    border-radius: 8px;
+    font-size: $font-size-p;
+    font-family: $font-family-base;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: $color-dark-shadow;
+    }
+}
+
+/* boxes */
+@mixin blue-box {
+    color: $color-accent;
+    border: 2px solid $color-accent;
+    background-color: $color-bg-dark;
+    box-shadow: 0 0 12px rgba($color-accent, 0.4), 0 0 40px rgba($color-accent, 0.3);
+}
+
+@mixin blue-small-box {
+    border: 1px solid $color-accent-light;
+    border-radius: 20px;
+    padding: 9px;
+    font-size: 1.2rem;
+    color: $color-accent-light;
+    box-shadow: 0 0 20px 1px rgba($color-accent, 0.4);
+}
+
+@mixin magenta-box {
+    @include magenta-button;
+    cursor: auto;
+    padding: 30px;
+    margin-bottom: 30px;
+
+    &:hover {
+        background-color: #22143d;
+    }
+
+    p {
+        color: $color-primary;
+        font-family: $font-family-base;
+        font-weight: bold;
+        font-size: 1.7rem;
+    }
+}
+
+
+@mixin input {
+    margin: 30px 0px;
+    height: 40px;
+    width: 400px;
+    border: 1px solid #048B9C;
+    border-radius: 8px;
+    background-color: black;
+    outline: none;
+    color: $color-accent;
+    padding-left: 10px;
+    font-size: 1.5rem;
+    font-family: $font-family-base;
+}

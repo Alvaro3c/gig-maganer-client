@@ -1,0 +1,38 @@
+@import '../utils/mixings.scss';
+@import '../utils/variables.scss';
+
+.form-container {
+    border: 2px solid $color-secondary;
+    border-radius: 8px;
+    padding-bottom: 300px;
+    padding: $spacing-md;
+    margin-bottom: 6rem;
+
+    h3 {
+        font-family: $font-family-heading;
+        font-size: 2rem;
+        color: $color-secondary;
+        margin-bottom: 30px;
+        text-align: left;
+    }
+
+    #button-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: $spacing-xl;
+
+        #cancel-btn {
+            @include blue-button
+        }
+
+        #save-gig-btn {
+            @include pink-button
+        }
+    }
+}
+
+#total-travel-budget-box {
+    @include magenta-box;
+    margin: 40px 0;
+    padding: 30px;
+}
