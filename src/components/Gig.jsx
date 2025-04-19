@@ -79,7 +79,6 @@ const Gig = ({ filterFn, setSelectedGig, selectedGig, isClicked, setIsClicked, f
                             )}
                         </div>
                     </td>
-
                     {expandedGigIndex === index && (
                         <>
                             <td id='venue-data'>
