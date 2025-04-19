@@ -121,7 +121,6 @@ const Gig = ({ filterFn, setSelectedGig, selectedGig, isClicked, setIsClicked, f
                             </td>
                         </>
                     )}
-
                     <td id='details-modal' onClick={() => handleClickModal(gig)}>
                         <ReceiptText color='#06b6d4' />
                         <p>Details</p>
