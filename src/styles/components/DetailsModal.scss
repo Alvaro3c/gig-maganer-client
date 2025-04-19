@@ -21,6 +21,7 @@
     position: relative;
     background-color: $color-bg-dark;
     padding: $spacing-xl;
+    overflow: scroll;
 
     &:hover {
         background-color: $color-bg-dark;
@@ -50,10 +51,26 @@
             gap: 20px;
             margin: 20px 0;
             padding: 10px;
+            border-radius: 8px;
 
             p {
                 color: $color-accent-light;
             }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #details-modal-box {
+        width: 90%;
+        height: 95vh;
+    }
+
+    .MuiTabs-flexContainer {
+        flex-direction: column;
+
+        .MuiButtonBase-root {
+            width: 100%;
         }
     }
 }

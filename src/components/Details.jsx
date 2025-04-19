@@ -40,7 +40,7 @@ const Details = ({ gig }) => {
                     {duration
                         ? <article>
                             <h5>Duration</h5>
-                            <p> {duration}</p>
+                            <p>{duration > 0 ? duration + ' days' : null}</p>
                         </article>
                         : null
                     }

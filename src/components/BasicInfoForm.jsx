@@ -115,9 +115,11 @@ const BasicInfoForm = ({ handleDataChange, gigData, value, setValue }) => {
                                         sx={{
                                             background: "#1E1E1E",
                                             color: "white",
+                                            position: 'relative',
+                                            left: '-100%',
                                             "& .MuiPickersCalendarHeader-label": { color: "white", fontSize: "1.2rem" },
                                             "& .MuiDayCalendar-weekDayLabel": { color: "white !important", opacity: 1 },
-                                            "& .MuiPickersDay-root": { color: "white", "&.Mui-selected": { background: "#06b6d4" } },
+                                            "& .MuiPickersDay-root": { color: "white", "&.Mui-selected": { background: "#06b6d4" } }
                                         }}
                                     />
                                 </LocalizationProvider>

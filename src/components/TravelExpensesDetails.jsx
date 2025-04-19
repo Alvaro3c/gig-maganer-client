@@ -13,18 +13,18 @@ const TravelExpensesDetails = ({ gig }) => {
 
                 <div>
                     <article>
-                        <h5>Transport</h5>
+                        <h5>Transport Costs</h5>
                         <p>{gig.transportCosts ? gig.transportCosts + '€' : null}</p>
                     </article>
                     <article>
-                        <h5>Other Costs</h5>
-                        <p>{gig.otherCosts ? gig.otherCosts + '€' : ''}</p>
+                        <h5>Accommodation Costs</h5>
+                        <p>{gig.accommodationCosts ? gig.accommodationCosts + '€' : null}</p>
                     </article>
                 </div>
                 <div>
                     <article>
-                        <h5>Accommodation Costs</h5>
-                        <p>{gig.accommodationCosts ? gig.accommodationCosts + '€' : null}</p>
+                        <h5>Other Costs</h5>
+                        <p>{gig.otherCosts ? gig.otherCosts + '€' : ''}</p>
                     </article>
                     <article>
                         <h5>Total Cost</h5>

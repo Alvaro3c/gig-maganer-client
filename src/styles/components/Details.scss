@@ -21,7 +21,6 @@
         p {
             text-align: left;
             color: $color-accent;
-
         }
 
         .purchased {
@@ -30,6 +29,27 @@
 
         .not-purchased {
             color: tomato;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    #general-details {
+        flex-direction: column;
+        gap: 0;
+        padding-bottom: $spacing-md;
+
+        article {
+            margin-bottom: 0;
+
+            h5 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
         }
     }
 }

@@ -76,7 +76,7 @@ const DetailsModal = ({ gig, isClicked, setIsClicked }) => {
                         </div>
                     </section>
 
-                    <Box sx={{ borderColor: 'divider', width: '100%', minWidth: '50%', scrollBehavior: 'auto', margin: '0 auto' }} className="box1">
+                    <Box sx={{ borderColor: 'divider', width: '100%', minWidth: '50%', scrollBehavior: 'auto', margin: '0 auto' }} className="box1" id="modal-tabs">
                         <Tabs
                             value={value}
                             onChange={handleChange}

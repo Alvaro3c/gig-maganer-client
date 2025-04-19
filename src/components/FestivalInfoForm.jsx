@@ -60,8 +60,8 @@ const FestivalInfoForm = ({ handleDataChange, gigData }) => {
         }
         setAddArtistIsClicked(!addArtistIsClicked);
     };
-
-    const isAddButtonDisabled = gigData.festivalArtists.length > 0 &&
+    const festivalArtists = gigData.festivalArtists || [];
+    const isAddButtonDisabled = festivalArtists > 0 &&
         gigData.festivalArtists[gigData.festivalArtists.length - 1].trim() === '';
 
     const noFestivalArtistAddedMessage = (

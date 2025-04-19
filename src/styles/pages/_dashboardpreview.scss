@@ -31,11 +31,25 @@
 
     #add-gig-btn {
         @include magenta-button;
-        padding: 10px 20px;
-        font-size: 1.5rem;
+        padding: $spacing-xs $spacing-sm;
+        font-size: 1.2rem;
         display: flex;
         align-items: center;
         gap: 20px; // Ajusta esto al gusto
     }
 
+}
+
+/*  
+    } */
+
+@media (max-width: 768px) {
+    #upper-heading {
+        flex-direction: column;
+
+        button {
+            width: 50%;
+            margin: $spacing-md auto 0;
+        }
+    }
 }

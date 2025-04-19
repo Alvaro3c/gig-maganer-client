@@ -8,11 +8,20 @@ tbody tr:last-of-type td {
 td {
     padding: $spacing-lg $spacing-sm;
     color: $color-text-dark-light;
-    text-align: left;
     border-bottom: 1px solid $color-muted;
     height: 120px;
 
     h4 {
+        display: none;
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+        text-align: left;
+    }
+
+    .arrow-icon {
         display: none;
     }
 }
@@ -79,8 +88,6 @@ td {
 }
 
 @media (max-width: 768px) {
-
-
     thead {
         display: none; // ocultamos cabecera
     }
@@ -103,13 +110,12 @@ td {
         padding: $spacing-sm $spacing-md;
         height: auto;
         box-shadow: 0 0 16px 4px rgba($color-accent, 0.2);
+        border-bottom: none;
 
         h4 {
             display: block;
             margin-bottom: 20px;
         }
-
-        border-bottom: none;
 
         .is-festival-status {
             display: flex;
@@ -119,6 +125,22 @@ td {
             text-align: left;
         }
 
+        .arrow-icon {
+            display: block;
+        }
+    }
+
+    #artist-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #details-modal {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: $spacing-sm;
     }
 
     #delete-btn {
@@ -126,7 +148,5 @@ td {
         justify-content: center;
         align-items: center;
     }
-
-    // Opcional: para dar un poco de separación visual entre tarjetas
 
 }
