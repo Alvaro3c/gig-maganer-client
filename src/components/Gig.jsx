@@ -79,48 +79,44 @@ const Gig = ({ filterFn, setSelectedGig, selectedGig, isClicked, setIsClicked, f
                             )}
                         </div>
                     </td>
-                    {expandedGigIndex === index && (
-                        <>
-                            <td id='venue-data'>
-                                <h4>Venue</h4>
-                                <p>{gig.venue}</p>
-                            </td>
-                            <td id='city-data'>
-                                <h4>City</h4>
-                                <div className="is-abroad-status">
-                                    <p>{gig.city}</p>
-                                    {gig.isAbroad && <div>Travel</div>}
-                                </div>
-                            </td>
-                            <td id='date-data'>
-                                <h4>Date</h4>
-                                <p>{gig.startDate}</p>
-                                {gig.endDate && <p> - {gig.endDate}</p>}
-                            </td>
-                            <td id='price-data'>
-                                <h4>Price</h4>
-                                <div className='is-abroad-status'>
-                                    <p>{gig.ticketPrice}€</p>
-                                    {gig.isAbroad && (
-                                        <p id='total-with-tickets'>
-                                            Total with tickets: {(gig.accommodationCosts || 0) + (gig.otherCosts || 0) + (gig.transportCosts || 0) + (gig.ticketPrice || 0)}€
-                                        </p>
-                                    )}
-                                </div>
-                            </td>
-                            <td id='ticket-data'>
-                                <h4>Have tickets</h4>
-                                <div className="ticket-status">
-                                    <input
-                                        type="checkbox"
-                                        checked={gig.haveTickets}
-                                        onChange={() => handleCheckboxChange(gig)}
-                                    />
-                                    {gig.haveTickets ? <TicketCheck color="#47d040" /> : <TicketSlash color="#cc0000" />}
-                                </div>
-                            </td>
-                        </>
-                    )}
+                    <td id='venue-data'>
+                        <h4>Venue</h4>
+                        <p>{gig.venue}</p>
+                    </td>
+                    <td id='city-data'>
+                        <h4>City</h4>
+                        <div className="is-abroad-status">
+                            <p>{gig.city}</p>
+                            {gig.isAbroad && <div>Travel</div>}
+                        </div>
+                    </td>
+                    <td id='date-data'>
+                        <h4>Date</h4>
+                        <p>{gig.startDate}</p>
+                        {gig.endDate && <p> - {gig.endDate}</p>}
+                    </td>
+                    <td id='price-data'>
+                        <h4>Price</h4>
+                        <div className='is-abroad-status'>
+                            <p>{gig.ticketPrice}€</p>
+                            {gig.isAbroad && (
+                                <p id='total-with-tickets'>
+                                    Total with tickets: {(gig.accommodationCosts || 0) + (gig.otherCosts || 0) + (gig.transportCosts || 0) + (gig.ticketPrice || 0)}€
+                                </p>
+                            )}
+                        </div>
+                    </td>
+                    <td id='ticket-data'>
+                        <h4>Have tickets</h4>
+                        <div className="ticket-status">
+                            <input
+                                type="checkbox"
+                                checked={gig.haveTickets}
+                                onChange={() => handleCheckboxChange(gig)}
+                            />
+                            {gig.haveTickets ? <TicketCheck color="#47d040" /> : <TicketSlash color="#cc0000" />}
+                        </div>
+                    </td>
                     <td id='details-modal' onClick={() => handleClickModal(gig)}>
                         <ReceiptText color='#06b6d4' />
                         <p>Details</p>
