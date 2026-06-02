@@ -7,8 +7,8 @@ import dayjs from 'dayjs';
 const BasicInfoForm = ({ handleDataChange, gigData, value, setValue }) => {
     const [showStartCalendar, setShowStartCalendar] = useState(false);
     const [showEndCalendar, setShowEndCalendar] = useState(false);
+    const [dateError, setDateError] = useState('');
 
-    // Manejar cambio en fecha de inicio
     const handleStartDateChange = (newDate) => {
         const formattedDate = newDate.format('MMM D, YYYY');
         handleDataChange({
@@ -17,11 +17,21 @@ const BasicInfoForm = ({ handleDataChange, gigData, value, setValue }) => {
                 value: formattedDate
             }
         });
+        if (gigData.endDate && newDate.isAfter(dayjs(gigData.endDate))) {
+            setDateError('The start date cannot be after the end date.');
+        } else {
+            setDateError('');
+        }
         setShowStartCalendar(false);
     };
 
-    // Manejar cambio en fecha de finalización
     const handleEndDateChange = (newDate) => {
+        if (gigData.startDate && newDate.isBefore(dayjs(gigData.startDate))) {
+            setDateError('The end date cannot be before the start date.');
+            setShowEndCalendar(false);
+            return;
+        }
+        setDateError('');
         const formattedDate = newDate.format('MMM D, YYYY');
         handleDataChange({
             target: {
@@ -128,6 +138,12 @@ const BasicInfoForm = ({ handleDataChange, gigData, value, setValue }) => {
                     )}
                 </div>
             </section>
+
+            {dateError && (
+                <p style={{ color: '#f20202', fontSize: '0.85rem', marginTop: '4px' }}>
+                    {dateError}
+                </p>
+            )}
 
             <section id="checkbox-container">
                 <div>
